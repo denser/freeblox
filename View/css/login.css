@@ -1,0 +1,178 @@
+/*
+  Copyright (C) 2015-2018 www.allo.com - All Rights Reserved.
+  FreeBlox is the Freeware GUI Management Tool for Blox [http://www.blox.org]
+  You are granted a non-exclusive License to use the FreeBlox software for
+  any purposes for an unlimited period of time. The software product under
+  this License is provided free of charge.
+  Even though a license fee is not paid for the use of Freeware Version
+  software, it does not mean that there are no conditions for using such
+  software:
+
+   1. The Software may be installed and used by the Licensee for any legal
+      purpose.
+
+   2. The Software may be installed and used by the Licensee on any number
+      of systems.
+
+   3. The Software can be copied and distributed under the condition that
+      original copyright notice and disclaimer of warranty will stay intact,
+      and the Licensee will not charge money or fees for the Software
+      product, except to cover distribution costs.
+
+   4. The Licensee will not have any proprietary rights in and to the
+      Software. The Licensee acknowledges and agrees that the Licensor retains
+      all copyrights and other proprietary rights in and to the Software.
+
+   5. Use within the scope of this License is free of charge and no royalty
+      or licensing fees shall be paid by the Licensee.
+*/
+
+@charset "utf-8";
+
+.login_wrapper {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	overflow: visible;
+}
+.login_main_container {
+	width: 440px;
+	height: 340px;
+	background-image: url(../images/login_page_bg.png);
+	margin-left: -250px; /***  width / 2   ***/
+	position: absolute;
+	top: -200px; /***  height / 2   ***/
+	left: 50%;
+	padding: 30px;
+}
+.login_top_logo_space {
+	float: left;
+	height: 150px;
+	width: 430px;
+}
+.login_input_field_main_box {
+	float: left;
+	height: 45px;
+	width: 440px;
+}
+.login_input_field_left_text {
+	float: left;
+	height: 15px;
+	width: 82px;
+	padding-left: 79px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.login_input_field_right_box {
+	float: left;
+	height: 35px;
+	width: 200px;
+	margin-right: 79px;
+	margin-bottom: 10px;
+}
+.login_input_field {
+	float: left;
+	height: 29px;
+	width: 194px;
+	background-color: #1e4f8a;
+	border: solid 1px #0e2c52;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	padding: 2px;
+}
+.login_input_field:focus {
+	border: solid 2px #3b85c9;
+}
+.login_error_msg_space {
+	float: left;
+	height: 15px;
+	width: 440px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #ff6600;
+}
+.login_bottom_text {
+	float: left;
+	height: 15px;
+	width: 440px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #CCCCCC;
+	font-size: 10px;
+}
+
+.login_button_container {
+	float: left;
+	height: 35px;
+	width: 100px;
+	margin-right: 89px;
+	margin-bottom: 15px;
+	margin-left: 261px;
+}
+.login_button {
+	height: 35px;
+	width: 100px;
+	background: url(../images/btn-login.png) no-repeat transparent;
+	border: none;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+}
+.login_button:hover {
+	height: 35px;
+	width: 100px;
+	background: url(../images/btn-login.png) no-repeat transparent;
+	background-position: left -35px;
+}
+.login_button:active {
+	height: 35px;
+	width: 100px;
+	background: url(../images/btn-login.png) no-repeat transparent;
+	background-position: left -70px;
+}
+
+.sbc-logo {
+	background: url(../images/Product_Logo.png) no-repeat transparent;
+	width: 330px;
+	margin-left: 55px;
+	margin-top: 50px;
+	height: 85px;
+	border: none;
+	outline: 0;
+}
+
+.txt-uid {
+	background: url(../images/bg-login-uid.png) no-repeat left top;
+	width: 358px;
+	height: 38px;
+	margin-top: 6px;
+	margin-left: 80px;
+}
+.txt-pwd {
+	background: url(../images/bg-login-pwd.png) no-repeat left top;
+	width: 358px;
+	height: 38px;
+	margin-top: 8px;
+	margin-left: 80px;
+}
+.txt-uid input, .txt-pwd input {
+	border: none;
+	background: none;
+	font-size: 16px;
+	color: #444;
+	margin-top: 8px;
+	margin-left: 40px;
+	padding-left: 18px;
+	width: 210px;
+}
+

@@ -1,0 +1,134 @@
+<!--
+  Copyright (C) 2015-2018 www.allo.com - All Rights Reserved.
+  FreeBlox is the Freeware GUI Management Tool for Blox [http://www.blox.org]
+  You are granted a non-exclusive License to use the FreeBlox software for
+  any purposes for an unlimited period of time. The software product under
+  this License is provided free of charge.
+  Even though a license fee is not paid for the use of Freeware Version
+  software, it does not mean that there are no conditions for using such
+  software:
+
+   1. The Software may be installed and used by the Licensee for any legal
+      purpose.
+
+   2. The Software may be installed and used by the Licensee on any number
+      of systems.
+
+   3. The Software can be copied and distributed under the condition that
+      original copyright notice and disclaimer of warranty will stay intact,
+      and the Licensee will not charge money or fees for the Software
+      product, except to cover distribution costs.
+
+   4. The Licensee will not have any proprietary rights in and to the
+      Software. The Licensee acknowledges and agrees that the Licensor retains
+      all copyrights and other proprietary rights in and to the Software.
+
+   5. Use within the scope of this License is free of charge and no royalty
+      or licensing fees shall be paid by the Licensee.
+-->
+<html>
+	<head>
+	<link rel="stylesheet" href="css/jquery.ui.all.css">
+	<link rel="stylesheet" href="css/demos.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery.ui.core.js"></script>
+	<script src="js/jquery.ui.widget.js"></script>
+	<script src="js/jquery.ui.accordion.js"></script>
+	<script src="js/jquery.ui.button.js"></script>
+	<script src="js/jquery.ui.position.js"></script>
+	<script src="js/jquery.ui.tooltip.js"></script>
+	<script src="js/jquery.ui.dialog.js"></script>
+	<script src="js/menu.js"></script>
+	<script type="text/javascript">
+
+	function closeAddEditDialog() {
+		$main("#dialog-popup").dialog("close");
+	}
+
+	function setUpdates() {
+		$.ajax({
+			url : "../Model/apply_changes.php"
+		}).done(function(output) {
+			var list = output.split(",|,");
+			var list_length = list.length;
+			var response;
+			for(var i=0; i < list.length; i++) {
+				response = list[i].split(",");
+				if(response[1] == "FAILURE") {
+					break;
+				}
+			}
+			var no_of_changes = $("#updates").val();
+			if(response[1] == "FAILURE") {
+				applyError(response[2]);
+			} else {
+				if(response[3] == "YES") {
+					applyReboot();
+				} else {
+					updateSuccess(no_of_changes);
+				}
+			}
+		});
+	}
+
+	function refreshFrame() {
+		parent.document.getElementById("container").src = parent.document.getElementById("container").src;
+	}
+
+	function ignoreChanges() {
+		$.ajax({
+			type:"POST",
+			data:{ignore_config:1},
+			url : "../Model/apply_changes.php"
+		}).done(function(output) {
+				parent.document.getElementById("container").src = parent.document.getElementById("container").src;
+			});
+	}
+
+	function updateSuccess(val) {
+		document.getElementById("confirmsuccess").style.display = "block";
+		if( val < 1 ) {
+			document.getElementById("confirmsuccess_div").innerHTML = "No configuration changes were found!";
+		} else {
+			document.getElementById("confirmsuccess_div").innerHTML = "All the configuration files are successfully updated.";
+		}
+		document.getElementById("confirmsuccess_div").style.display = "block";
+		$(".ui-dialog-titlebar").show();
+		$("#dialog-success").dialog({
+			resizable : false,
+			dialogClass : "no-close",
+			height : 160,
+			width : 450,
+			modal : true,
+			buttons : {
+				"OK" : function() {
+					refreshFrame();
+				}
+			}
+		});
+		$(".ui-widget-content").removeClass("custom-add-edit-dialog");
+	}
+
+	function updateDetails(elem) {
+		if (parseInt(elem.value) > 0) {
+			$("#dialog-popup").html("");
+			$("#dialog-popup").load("update-details.php").dialog({
+				modal : true,
+				height : 560,
+				width : 600,
+				closeOnEscape : false,
+				dialogClass : "no-close"
+			});
+			$(".ui-dialog-titlebar").hide();
+			$(".ui-widget-content").addClass("custom-add-edit-dialog");
+			$("#dialog-popup").removeClass("ui-dialog-content");
+		}
+	}
+	</script>
+	<?php
+		$obj = DateTimeConfig::getConfig();
+		$update_count = $obj->getActionListCount();
+	?>
+	</head>
+</html>

@@ -1,0 +1,91 @@
+/*
+  Copyright (C) 2015-2018 www.allo.com - All Rights Reserved.
+  FreeBlox is the Freeware GUI Management Tool for Blox [http://www.blox.org]
+  You are granted a non-exclusive License to use the FreeBlox software for
+  any purposes for an unlimited period of time. The software product under
+  this License is provided free of charge.
+  Even though a license fee is not paid for the use of Freeware Version
+  software, it does not mean that there are no conditions for using such
+  software:
+
+   1. The Software may be installed and used by the Licensee for any legal
+      purpose.
+
+   2. The Software may be installed and used by the Licensee on any number
+      of systems.
+
+   3. The Software can be copied and distributed under the condition that
+      original copyright notice and disclaimer of warranty will stay intact,
+      and the Licensee will not charge money or fees for the Software
+      product, except to cover distribution costs.
+
+   4. The Licensee will not have any proprietary rights in and to the
+      Software. The Licensee acknowledges and agrees that the Licensor retains
+      all copyrights and other proprietary rights in and to the Software.
+
+   5. Use within the scope of this License is free of charge and no royalty
+      or licensing fees shall be paid by the Licensee.
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 30px;
+	border-bottom: 3px solid #b5ad69;
+/*	border-left: 1px solid #d7d2a4;*/
+	/*width: 100%;*/
+	padding:10px 234px 0px 10px;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 29px;
+	line-height: 26px;
+	border: 1px solid #b5ad69;
+	margin-bottom: -1px;
+	background: #e0dcaa;
+	overflow: hidden;
+	position: relative;
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #575330;
+	display: block;
+	font-size: 14px;
+	padding: 2px 12px;
+	border: 1px solid #fff;
+	outline: none;
+}
+ul.tabs li a:hover {
+	background: #cac371;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  {
+	background: #fff;
+	border-bottom: 3px solid #fff;
+	font-weight:bold;
+}
+.tab_container {
+
+	border-top: none;
+	float: left;
+	width: 100%;
+	background: #fff;
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+.tab_content {
+	padding: 10px;
+}
+.no-tabcnt-padding { padding:10px 0;}
+
+.tab_content td {padding: 2px 2px 2px 0px;}

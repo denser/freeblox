@@ -1,0 +1,186 @@
+/*
+  Copyright (C) 2015-2018 www.allo.com - All Rights Reserved.
+  FreeBlox is the Freeware GUI Management Tool for Blox [http://www.blox.org]
+  You are granted a non-exclusive License to use the FreeBlox software for
+  any purposes for an unlimited period of time. The software product under
+  this License is provided free of charge.
+  Even though a license fee is not paid for the use of Freeware Version
+  software, it does not mean that there are no conditions for using such
+  software:
+
+   1. The Software may be installed and used by the Licensee for any legal
+      purpose.
+
+   2. The Software may be installed and used by the Licensee on any number
+      of systems.
+
+   3. The Software can be copied and distributed under the condition that
+      original copyright notice and disclaimer of warranty will stay intact,
+      and the Licensee will not charge money or fees for the Software
+      product, except to cover distribution costs.
+
+   4. The Licensee will not have any proprietary rights in and to the
+      Software. The Licensee acknowledges and agrees that the Licensor retains
+      all copyrights and other proprietary rights in and to the Software.
+
+   5. Use within the scope of this License is free of charge and no royalty
+      or licensing fees shall be paid by the Licensee.
+*/
+/*!
+ * jQuery UI Accordion 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Accordion#theming
+ */
+.ui-accordion .ui-accordion-header {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	/*margin-top: 2px;*/
+	padding: .5em .5em .5em .7em;
+	min-height: 0; /* support: IE7 */
+}
+.ui-accordion .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-noicons {
+	padding-left: .7em;
+}
+.ui-accordion .ui-accordion-icons .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-accordion .ui-accordion-content {
+	//padding: 1em 2.2em;
+	border-top: 0;
+	overflow: auto;
+}
+
+.tabsetup{
+        padding-top: 3px;
+        padding-bottom:3px;
+        padding-left:14px;
+        background-color: #081b46;
+        cursor: pointer;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: #224472;
+        border-bottom-color: #030918;
+        color: #DDD;
+}
+
+.tabsetupselected{
+        padding-top: 3px;
+        padding-bottom:3px;
+        padding-left:14px;
+        background-color: #f8f8f8;
+        cursor: pointer;
+        color: #444;
+}
+
+.tabsetup:hover{
+        padding-top: 3px;
+        padding-bottom:3px;
+        padding-left:14px;
+        background-color: #1b3165;
+        cursor: pointer;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: #375088;
+        border-bottom-color: #030918;
+}
+
+.subtabsetup_bg{
+	padding: 0px;
+
+}
+
+.subtabsetup{
+        background-color: #1f4089;
+        border-bottom: 1px solid #021d5a;
+        border-top: 1px solid #3154a4;
+        padding-right: 2px;
+        padding-left: 15px;
+        color:#9EC5DF;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        cursor: pointer;
+}
+
+.subtabsetup:hover{
+        background-color: #10327e;
+        border-bottom: 1px solid #021d5a;
+        border-top: 1px solid #3154a4;
+        padding-right: 2px;
+        padding-left: 15px;
+        color:#FFFFFF;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        cursor: pointer;
+}
+.subtabselected {
+        background-color: #ffffff;
+        padding-top: 2px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+        padding-left: 15px;
+        color: #444;
+        cursor: pointer;
+}
+
+.tabdashboard{
+	padding: 5px;
+	background-color: #EEEEEE;
+	cursor: pointer;
+	color:#FFFFFF;
+}
+.orange_tab_main_container {
+	height: 30px;
+	width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.time_display_tab {
+	float: left;
+	height: 30px;
+	width: 400px;
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-right-color: #CC6600;
+}
+.center_message_tab {
+	float: left;
+	height: 30px;
+	width: 400px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #990000;
+	border-left-color: #FF00FF;
+}
+.right_tab_container {
+	float: right;
+	height: 30px;
+	width: 200px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #00CC00;
+	border-left-color: #6633CC;
+}
